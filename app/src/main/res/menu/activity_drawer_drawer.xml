@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/T_XX_X_1"
+            android:icon="@drawable/speedometer"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/T_XX_X_2"
+            android:icon="@drawable/a2"
+            android:title="Class Event" />
+      <!--  <item
+            android:id="@+id/T_XX_X_PIC"
+            android:icon="@drawable/upload_mnu"
+            android:title="Upload Student Photo" />-->
+        <item
+            android:id="@+id/T_XX_XX_3"
+            android:icon="@drawable/a1"
+            android:title="Attendance Register" />
+
+        <item
+        android:id="@+id/T_XX_XX__X_4"
+        android:icon="@drawable/a3"
+        android:title="Assign Homework" />
+
+        <item
+            android:id="@+id/T_XX_XX__X_5"
+            android:icon="@drawable/a5"
+            android:title="Class Tests" />
+
+        <item
+            android:id="@+id/T_XX_XX__X_44"
+            android:icon="@drawable/a6"
+            android:title="Tests Results" />
+        <item
+            android:id="@+id/T_XX_XX__X_leave"
+            android:icon="@drawable/a4"
+            android:title="Leave Management" />
+        <item
+            android:id="@+id/T_XX_XX__X_t_chat"
+            android:icon="@drawable/a8"
+            android:title="Chat" />
+
+
+    </group>
+    <group
+        android:id="@+id/grp2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/id_XX1010"
+            android:icon="@drawable/exit"
+            android:title="Logout" />
+    </group>
+
+</menu>

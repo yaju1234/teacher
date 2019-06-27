@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pattern">
+    <LinearLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/colorPrimaryDark">
+    <TextView
+        android:id="@+id/homework_st_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Kamla Mehta"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:id="@+id/homework_st_class"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Class 8th(section-B)"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/homework_st_rollno"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Roll no- 114"
+        android:textColor="@color/white"
+
+        android:textSize="16sp"
+        />
+   </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/choosedate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/msg_line">
+
+                <TextView
+                    android:id="@+id/homework_date"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose date here"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+<Button
+    android:layout_alignParentRight="true"
+    android:id="@+id/increment_date"
+    android:background="@drawable/rightarrow"
+    android:layout_marginTop="10dp"
+    android:layout_width="30dp"
+    android:layout_height="30dp" />
+                <Button
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/decrement_date"
+                    android:background="@drawable/backarrow"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+
+
+            </RelativeLayout>
+
+<LinearLayout
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:text="HOMEWORK"
+      />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/news_body"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:text="Assigned on"/>
+    <TextView
+        android:id="@+id/homework_date1"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/news_body"
+        android:textSize="16sp"
+        android:text="12th feb 2016"
+        android:textStyle="bold"/>
+
+    </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/homework_subject_list"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+                </LinearLayout>
+        </ScrollView>
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/homeworkdata_not_availabe"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No Homework available."
+        android:textColor="@color/coor_white_slat"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

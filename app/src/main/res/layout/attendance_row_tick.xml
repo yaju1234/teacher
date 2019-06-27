@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_msg_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="1dp"
+            android:background="#f0f0f0"
+            android:orientation="vertical">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/row_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_imageOuter"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/image_request"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/action_settings"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/boy"/>
+
+                        <ProgressBar
+                            android:id="@+id/pb_image_request"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"
+                            />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/rl_imageOuter"
+                        android:layout_toRightOf="@+id/rl_imageOuter"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/name_st"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Ajay Kumar"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/dot_light_screen4"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/viewrg"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radio_present"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="Present"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/radio_absent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Absent" />
+
+                            <RadioButton
+                                android:id="@+id/radio_Leave"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Leave" />
+
+
+                        </RadioGroup>
+                        <TextView
+                            android:id="@+id/sentserver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Submit"
+                            android:layout_gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/dot_light_screen4"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pattern"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <!--
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="Student Login"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_profile_photo"
+        android:gravity="center"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:drawableTint="#999999"
+                    android:maxLength="15"
+                    android:hint="User Name"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawablePadding="3dp"
+                    android:drawableTint="#999999"
+                    android:hint="@string/password"
+                    android:maxLength="10"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textview_forgotpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="15dp"
+                android:layout_gravity="end"
+                android:text="Forgot Password"
+                android:textColor="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/btn_loginsubmit"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/user_profile_photo"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="4dp"
+        android:src="@drawable/app_icon" />
+</RelativeLayout>
