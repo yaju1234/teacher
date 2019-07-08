@@ -7,10 +7,10 @@
             android:id="@+id/T_XX_X_1"
             android:icon="@drawable/speedometer"
             android:title="Dashboard" />
-        <item
+       <!-- <item
             android:id="@+id/T_XX_X_2"
             android:icon="@drawable/a2"
-            android:title="Class Event" />
+            android:title="Class Event" />-->
       <!--  <item
             android:id="@+id/T_XX_X_PIC"
             android:icon="@drawable/upload_mnu"
@@ -30,10 +30,10 @@
             android:icon="@drawable/a5"
             android:title="Class Tests" />
 
-        <item
+       <!-- <item
             android:id="@+id/T_XX_XX__X_44"
             android:icon="@drawable/a6"
-            android:title="Tests Results" />
+            android:title="Tests Results" />-->
         <item
             android:id="@+id/T_XX_XX__X_leave"
             android:icon="@drawable/a4"

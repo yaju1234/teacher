@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentLeft="true"
-    android:background="@drawable/background_pattern">
+    android:background="#ffffff">
 
     <ScrollView
         android:layout_width="match_parent"
