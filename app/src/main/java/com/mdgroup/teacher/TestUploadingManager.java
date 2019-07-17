@@ -56,8 +56,8 @@ import retrofit2.Response;
 
 public class TestUploadingManager extends Fragment {
 
-
-    Button class_photos, class_section, subject, btn_date, select_submit,btnselect_st,btnselect_et;
+    static Button btn_date;
+    Button class_photos, class_section, subject, select_submit,btnselect_st,btnselect_et;
     EditText  et_hw_heading;
     ArrayList<HomeWorkClassModel> arr_hw_classmodel;
     ArrayList<HomeWorkSectionModel> arr_hw_sectionmodel;
@@ -68,7 +68,8 @@ public class TestUploadingManager extends Fragment {
     String selected_class_id = "", selected_class_name = "";
     String selected_section_id = "", selected_section_name = "";
     String selected_subject_id = "", selected_subject_name = "";
-    String selected_date = "",selected_st = "",selected_et = "";
+    String selected_st = "",selected_et = "";
+    static String  selected_date = "";
 
     public TestUploadingManager() {
     }
@@ -120,6 +121,8 @@ public class TestUploadingManager extends Fragment {
         btnselect_st= (Button) view.findViewById(R.id.select_st);
         btnselect_et= (Button) view.findViewById(R.id.select_et);
         btn_date = (Button) view.findViewById(R.id.select_date);
+
+        selected_date = "";
 
         select_submit = (Button) view.findViewById(R.id.select_submit);
 
@@ -666,7 +669,7 @@ public class TestUploadingManager extends Fragment {
     }
 
     @SuppressLint("ValidFragment")
-    public class DATEFragment extends DialogFragment implements
+    public static class DATEFragment extends DialogFragment implements
             DatePickerDialog.OnDateSetListener {
 
         @Override

@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,7 +88,7 @@ public class HomeFragmentContoller extends Fragment {
         v=inflater.inflate(R.layout.fragment_dash,container,false);
         list = (GridView) v.findViewById(R.id.gv);
         list.setAdapter(new CustomAdapter(getActivity(), osNameList, osImages));
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position==0){
@@ -117,7 +118,7 @@ public class HomeFragmentContoller extends Fragment {
 
 
             }
-        });
+        });*/
         init();
         return v;
     }
@@ -230,6 +231,7 @@ public class HomeFragmentContoller extends Fragment {
         {
             TextView os_text;
             ImageView os_img;
+            CardView card_view;
         }
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
@@ -240,9 +242,100 @@ public class HomeFragmentContoller extends Fragment {
             rowView = inflater.inflate(R.layout.sample_gridlayout, null);
             holder.os_text =(TextView) rowView.findViewById(R.id.os_texts);
             holder.os_img =(ImageView) rowView.findViewById(R.id.os_images);
+            holder.card_view =(CardView) rowView.findViewById(R.id.card_view);
 
             holder.os_text.setText(result[position]);
             holder.os_img.setImageResource(imageId[position]);
+
+            holder.os_text.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (position==0){
+                        switchFragment(new Attendacence_StudentManager());
+                    }
+                    else if (position==1){
+                        switchFragment(new ManagerLeaveHandler());
+                    }
+                    else if (position==2){
+                        switchFragment(new TestUploadingManager());
+                    }
+                    else if (position==3){
+                        switchFragment(new ResultManagerHandler());
+                    }
+                    else if (position==4){
+                        switchFragment(new ChatHandlerManager());
+                    }
+                    else if (position==5){
+                        UtilityFunction.showCenteredToast(getActivity(), "Postion 5");
+                    }
+                    else if (position==6){
+                        switchFragment(new FragmentUploadPhotos());
+                    }
+                    else if (position==7){
+                        switchFragment(new HomeworkUpload());
+                    }
+                }
+            });
+
+            holder.os_img.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (position==0){
+                        switchFragment(new Attendacence_StudentManager());
+                    }
+                    else if (position==1){
+                        switchFragment(new ManagerLeaveHandler());
+                    }
+                    else if (position==2){
+                        switchFragment(new TestUploadingManager());
+                    }
+                    else if (position==3){
+                        switchFragment(new ResultManagerHandler());
+                    }
+                    else if (position==4){
+                        switchFragment(new ChatHandlerManager());
+                    }
+                    else if (position==5){
+                        UtilityFunction.showCenteredToast(getActivity(), "Postion 5");
+                    }
+                    else if (position==6){
+                        switchFragment(new FragmentUploadPhotos());
+                    }
+                    else if (position==7){
+                        switchFragment(new HomeworkUpload());
+                    }
+                }
+            });
+
+            holder.card_view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (position==0){
+                        switchFragment(new Attendacence_StudentManager());
+                    }
+                    else if (position==1){
+                        switchFragment(new ManagerLeaveHandler());
+                    }
+                    else if (position==2){
+                        switchFragment(new TestUploadingManager());
+                    }
+                    else if (position==3){
+                        switchFragment(new ResultManagerHandler());
+                    }
+                    else if (position==4){
+                        switchFragment(new ChatHandlerManager());
+                    }
+                    else if (position==5){
+                        UtilityFunction.showCenteredToast(getActivity(), "Postion 5");
+                    }
+                    else if (position==6){
+                        switchFragment(new FragmentUploadPhotos());
+                    }
+                    else if (position==7){
+                        switchFragment(new HomeworkUpload());
+                    }
+                }
+            });
 
             return rowView;
         }

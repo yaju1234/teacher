@@ -76,8 +76,9 @@ public class Attendacence_StudentManager extends Fragment {
     ArrayList<HomeWorkSectionModel> arr_hw_sectionmodel;
 
     TextView student_not_availabe;
-    Button date_pic,submit_attendance;
-    String selected_dateattend = "";
+    Button submit_attendance;
+    static Button date_pic;
+    static String selected_dateattend = "";
 
     Dialog classDialog, sectionDialog;
     String selected_class_id = "", selected_class_name = "";
@@ -94,6 +95,7 @@ public class Attendacence_StudentManager extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.studentattendacenmanager, container, false);
         prefManager = new PrefManager(getActivity());
+        selected_dateattend = "";
         class_section = (Button) view.findViewById(R.id.class_section);
         date_pic = (Button) view.findViewById(R.id.date_pic);
         student_not_availabe = (TextView) view.findViewById(R.id.student_not_availabe);
@@ -198,7 +200,7 @@ public class Attendacence_StudentManager extends Fragment {
 
 
     @SuppressLint("ValidFragment")
-    public class DATEPICSELECTEDFRAGMENT extends DialogFragment implements
+    public static class DATEPICSELECTEDFRAGMENT extends DialogFragment implements
             DatePickerDialog.OnDateSetListener {
 
         @Override
